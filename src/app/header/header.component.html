@@ -1,0 +1,10 @@
+<div>
+  <h1>Glossary</h1>
+  <button (click)="createEntry($event)">Create entry</button>
+
+  <ul class="list">
+    <li *ngFor="let letter of letters">
+      <button (click)="selectLetter(letter)" >{{letter}}</button>
+    </li>
+  </ul>
+</div>
