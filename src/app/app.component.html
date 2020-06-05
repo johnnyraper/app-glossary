@@ -2,7 +2,10 @@
 
 <div *ngIf="data | filterWords: letter as filteredData">
   <ul *ngIf="filteredData.length; else notfound" class="data-list">
-    <li class="data-item" *ngFor="let d of filteredData">{{ d.name }} {{ d.description }}</li>
+    <li class="data-item" *ngFor="let data of filteredData">
+      <h3>{{ data.name }}</h3>
+      <p>{{ data.description }}</p>
+    </li>
   </ul>
 </div>
 

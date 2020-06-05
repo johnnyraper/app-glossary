@@ -1,11 +1,16 @@
+@import '../app/styles/variables';
 @import '../app/styles/utils';
 
 .data {
   &-list {
-    // @todo
+    margin-top: $grid-2x;
   }
 
   &-item {
-    margin: $grid 0;
+    margin: $grid-3x 0;
+
+    h3 {
+      color: lighten($color-background, 50%);
+    }
   }
 }

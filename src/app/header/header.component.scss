@@ -1,10 +1,13 @@
 @import '../../app/styles/utils';
 
+.actions-container {
+  margin: $grid-6x 0;
+}
 .letters {
   &-list {
     display: flex;
     justify-content: space-between;
-    margin: $grid-2x 0;
+    margin: $grid-3x 0 0;
   }
 
   &-item {
