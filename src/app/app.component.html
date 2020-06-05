@@ -1,8 +1,11 @@
-<app-header></app-header>
+<app-header (letterSelected)="filterGlossary($event)"></app-header>
 
-<div>
-  <ul>
-    <li *ngFor="let d of data">{{d.name}} {{d.description}}</li>
+<div *ngIf="data | filterWords: letter as filteredData">
+  <ul *ngIf="filteredData.length; else notfound" class="data-list">
+    <li class="data-item" *ngFor="let d of filteredData">{{ d.name }} {{ d.description }}</li>
   </ul>
 </div>
 
+<ng-template #notfound>
+  <span>No entries found to your research.</span>
+</ng-template>

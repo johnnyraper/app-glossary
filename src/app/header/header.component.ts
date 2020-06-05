@@ -37,14 +37,13 @@ export class HeaderComponent {
   ];
 
   @Output()
-  letterSelected: EventEmitter<string>;
+  public letterSelected: EventEmitter<string> = new EventEmitter<string>();
 
   public createEntry(event: any): void {
     console.log('create entry', event);
   }
 
   public selectLetter(letter: string) {
-    console.log('letter selected ', letter);
     this.letterSelected.emit(letter);
   }
 }

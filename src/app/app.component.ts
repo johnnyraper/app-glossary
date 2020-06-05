@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core';
 import { MockData } from './mock-data';
 
@@ -7,38 +8,23 @@ import { MockData } from './mock-data';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'glossary';
-  letters = [
-    'A',
-    'B',
-    'C',
-    'D',
-    'E',
-    'F',
-    'G',
-    'H',
-    'I',
-    'J',
-    'K',
-    'L',
-    'M',
-    'N',
-    'O',
-    'P',
-    'Q',
-    'R',
-    'S',
-    'T',
-    'U',
-    'V',
-    'W',
-    'X',
-    'Y',
-    'Z'
-  ];
-  data = MockData;
+  public title = 'glossary';
+  public data: any[] = MockData;
+  public letter = '';
+
+/**
+const count = 0;
+
+data.forEach(d => {
+  count += 1;
+}); */
+
+  public filterGlossary(letter: string): void {
+    this.letter = letter;
+  }
 
   public createEntry(event: any): void {
     console.log('create entry', event);
   }
+
 }

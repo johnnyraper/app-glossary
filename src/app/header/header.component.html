@@ -1,10 +1,13 @@
-<div>
-  <h1>Glossary</h1>
-  <button (click)="createEntry($event)">Create entry</button>
+<header>
+  <h1>Manufacturing Glossary of Terms</h1>
 
-  <ul class="list">
-    <li *ngFor="let letter of letters">
-      <button (click)="selectLetter(letter)" >{{letter}}</button>
+  <button (click)="createEntry($event)">Create entry</button>
+  <button (click)="createEntry($event)">Edit entry</button>
+  <button (click)="createEntry($event)">Delete entry</button>
+
+  <ul class="letters-list">
+    <li class="letters-item" *ngFor="let letter of letters">
+      <button class="btn-outline" (click)="selectLetter(letter)">{{ letter }}</button>
     </li>
   </ul>
-</div>
+</header>
