@@ -85,11 +85,6 @@ export const MockData = [
       'Modular and flexible CAM solution for 2.5D, 3D and 5-axis milling CAM.',
   },
   {
-    name: 'Tap cutter',
-    description:
-      'Tool used to create threading (the tool must be of the exact diameter of the desired hole).',
-  },
-  {
     name: 'Tool assembly',
     description:
       'References to a tool, a holder, and a stick out (how far the tool is sticking out of the holder).',
