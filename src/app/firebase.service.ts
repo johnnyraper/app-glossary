@@ -11,4 +11,11 @@ export class FirebaseService {
     return firebase.database().ref();
   }
 
+  writeDatabase(name, description) {
+    firebase.database().ref('/22').set({
+      name,
+      description
+    });
+  }
+
 }

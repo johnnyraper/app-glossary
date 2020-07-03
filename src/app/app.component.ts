@@ -24,7 +24,7 @@ export class AppComponent {
   }
 
   public createEntry(event: any): void {
-    console.log('create entry', event);
+    this.firebaseService.writeDatabase('test ', 'testformegan');
   }
 
 }
