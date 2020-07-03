@@ -29,13 +29,6 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
 
-const testRef = firebase.database().ref();
-testRef.once('value').then((snapshot) => {
-  console.log('value ', snapshot.val());
-});
-
-console.log('database ', database);
-
 if (environment.production) {
   enableProdMode();
 }

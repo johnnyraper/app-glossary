@@ -1,23 +1,23 @@
 
-import { Component } from '@angular/core';
-import { MockData } from './mock-data';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { FirebaseService } from './firebase.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
   public title = 'glossary';
-  public data: any[] = MockData;
+  public data: any[] = [];
   public letter = '';
 
-/**
-const count = 0;
-
-data.forEach(d => {
-  count += 1;
-}); */
+  constructor(private firebaseService: FirebaseService) {
+    this.firebaseService.initDatabase().on('value', (snapshot) => {
+      this.data = snapshot.val();
+    });
+  }
 
   public filterGlossary(letter: string): void {
     this.letter = letter;
