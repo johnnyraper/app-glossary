@@ -2,6 +2,7 @@
 
 @import "app/styles/variables";
 @import "app/styles/utils";
+@import "app/styles/fonts";
 
 body {
   margin: 0;
@@ -9,9 +10,8 @@ body {
   max-width: $button-width * 13;
   background: $color-background;
   color: $color-primary;
-  font-family: "Barlow", Roboto, sans-serif;
+  font-family: "Titillium", Arial, sans-serif;
   font-size: $font-size-larger;
-  padding: 0 $grid-5x;
 }
 
 h1 {
@@ -42,14 +42,12 @@ ul {
   list-style: none;
 }
 
-button {
+.letter {
   padding: $grid $grid-2x;
   font-size: $font-size-regular;
-  background: darken($color-accent, 40%);
-  border: 1px solid $color-accent-highlight;
-  box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.4);
+  border: none;
+  box-shadow: 3px 3px 5px 2px rgba(50, 41, 47, 0.8);
   color: $color-primary;
-  cursor: pointer;
   outline: none;
   transition: ease-in-out 0.2s;
 
@@ -58,10 +56,22 @@ button {
   }
 
   &.btn-outline {
-    background: darken($color-accent, 60%);
+    background: darken($color-background, 5%);
 
     &:hover {
       background: darken($color-accent, 55%);
     }
+  }
+}
+
+button, a {
+  outline: none;
+  cursor: pointer;
+  font-family: "Titillium", Arial, sans-serif;
+}
+
+@media (min-width: $tablet-upwards) {
+  body {
+    padding: 0 $grid-5x;
   }
 }

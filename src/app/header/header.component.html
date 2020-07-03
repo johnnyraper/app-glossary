@@ -1,15 +1,25 @@
 <header>
-  <h1>Manufacturing Glossary of Terms</h1>
+  <h1>Manufacturing Glossary</h1>
 
-  <div class="actions-container">
-    <button (click)="createEntry($event)">Create entry</button>
-    <button (click)="createEntry($event)">Edit entry</button>
-    <button (click)="createEntry($event)">Delete entry</button>
+  <main class="navigation-and-letter-data">
+    <nav class="navigation-container">
+      <button class="entry-add" (click)="createEntry($event)">
+        Create entry
+      </button>
+      <button class="entry-edit" (click)="createEntry($event)">
+        Modify entry
+      </button>
+      <button class="entry-delete" (click)="createEntry($event)">
+        Delete entry
+      </button>
+    </nav>
 
     <ul class="letters-list">
       <li class="letters-item" *ngFor="let letter of letters">
-        <button class="btn-outline" (click)="selectLetter(letter)">{{ letter }}</button>
+        <button class="btn-outline letter" (click)="selectLetter(letter)">
+          {{ letter }}
+        </button>
       </li>
     </ul>
-  </div>
+  </main>
 </header>

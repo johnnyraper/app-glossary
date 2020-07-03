@@ -15,3 +15,12 @@
   }
 }
 
+.no-entries {
+  margin: $grid-2x;
+}
+
+@media (min-width: $tablet-upwards) {
+  .no-entries {
+    margin: $grid-2x 0;
+  }
+}

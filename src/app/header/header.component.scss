@@ -1,15 +1,51 @@
 @import "../../app/styles/utils";
 @import "../../app/styles/variables";
 
-.actions-container {
-  margin: $grid-6x 0;
+h1 {
+  padding: 0 $grid-2x;
+  text-align: center;
+}
+
+.navigation-container {
+  display: flex;
+  flex-direction: column;
+
+  button {
+    display: block;
+    padding: $grid-2x 0;
+    font-size: $font-size-regular;
+    color: $color-primary;
+    border: 0;
+    box-shadow: 3px 3px 5px 2px rgba(50, 41, 47, 0.8);
+    transition: ease-in-out 0.2s;
+
+    &.entry-add {
+      background: url('../../assets/icons/icon-add.svg') no-repeat darken($color-background, 5%) $grid-2x center;
+      background-size: 28px;
+    }
+
+    &.entry-edit {
+      background: url('../../assets/icons/icon-edit.svg') no-repeat darken($color-background, 5%) $grid-2x center;
+      background-size: 28px;
+    }
+
+    &.entry-delete {
+      background: url('../../assets/icons/icon-delete.svg') no-repeat darken($color-background, 5%) $grid-2x center;
+      background-size: 28px;
+    }
+
+    &:hover {
+      background-color: darken($color-accent, 55%);
+    }
+  }
 }
 
 .letters {
   &-list {
-    margin-top: $grid-4x;
     overflow: auto;
     white-space: nowrap;
+    margin: $grid-4x 0 $grid-8x;
+    padding-bottom: $grid-4x;
   }
 
   &-item {
@@ -29,11 +65,28 @@
 }
 
 @media (min-width: $tablet-upwards) {
+  .navigation-and-letter-data {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: $grid-8x;
+  }
+
+  .navigation-container {
+    max-width: 200px;
+
+    button {
+      min-width: 190px;
+      padding: $grid-3x $grid-3x $grid-3x $grid-6x;
+    }
+  }
+
   .letters {
     &-list {
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-start;
+      margin: 0 0 0 $grid-4x;
+      padding-bottom: 0;
     }
   }
 }
