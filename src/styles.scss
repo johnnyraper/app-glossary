@@ -7,11 +7,11 @@
 body {
   margin: 0;
   padding: 0;
-  max-width: $button-width * 13;
   background: $color-background;
   color: $color-primary;
   font-family: "Titillium", Arial, sans-serif;
   font-size: $font-size-larger;
+  height: 100vh;
 }
 
 h1 {

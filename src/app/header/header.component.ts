@@ -39,8 +39,25 @@ export class HeaderComponent {
   @Output()
   public letterSelected: EventEmitter<string> = new EventEmitter<string>();
 
+
+  @Output()
+  public action: EventEmitter<string> = new EventEmitter<string>();
+
   public createEntry(event: any): void {
-    console.log('create entry', event);
+    this.action.emit('create');
+  }
+
+  public editEntry(event: any): void {
+    this.action.emit('edit');
+  }
+
+  public deleteEntry(event: any): void {
+    this.action.emit('delete');
+  }
+
+  // @todo: to delete - for test purposes
+  public testEntry(event: any): void {
+    this.action.emit(null);
   }
 
   public selectLetter(letter: string) {

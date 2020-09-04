@@ -6,6 +6,10 @@ h1 {
   text-align: center;
 }
 
+header {
+  max-width: $button-width * 13;
+}
+
 .navigation-container {
   display: flex;
   flex-direction: column;

@@ -6,11 +6,16 @@
       <button class="entry-add" (click)="createEntry($event)">
         Create entry
       </button>
-      <button class="entry-edit" (click)="createEntry($event)">
+      <button class="entry-edit" (click)="editEntry($event)">
         Modify entry
       </button>
-      <button class="entry-delete" (click)="createEntry($event)">
+      <button class="entry-delete" (click)="deleteEntry($event)">
         Delete entry
+      </button>
+
+      <!-- @todo: to delete - only for testing purposes -->
+      <button class="entry-delete" (click)="testEntry($event)">
+        Test button
       </button>
     </nav>
 

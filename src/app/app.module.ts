@@ -8,15 +8,15 @@ import { BodyComponent } from './body/body.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FilterWordsPipe } from './pipes/filter-words.pipe';
-
-
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     BodyComponent,
-    FilterWordsPipe
+    FilterWordsPipe,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
